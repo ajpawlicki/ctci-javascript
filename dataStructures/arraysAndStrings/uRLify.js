@@ -44,3 +44,23 @@ const uRLifyLinear = (str) => {
 
 console.log(uRLifyLinear('hello world  '));
 console.log(uRLifyLinear('hello world there    '));
+
+const uRLifyForwards = (str) => {
+  const arrayStr = str.split('');
+  const trueLength = str.trim().length;
+  let index = 0;
+  for (let i = 0; i < trueLength; i++) {
+    if (str[i] === ' ') {
+      arrayStr[index] = '%';
+      arrayStr[index+1] = '2';
+      arrayStr[index+2] = '0';
+      index += 3;
+    } else {
+      arrayStr[index] = str[i];
+      index++;
+    }
+  }
+  return arrayStr.join('');
+};
+
+console.log(uRLifyForwards('hello world what'));
