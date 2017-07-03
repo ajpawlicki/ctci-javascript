@@ -39,7 +39,7 @@ const isSubstring = (str1, str2) => {
   return true;
 };
 
-console.log(isSubstring('water', 'wwwaterbottle'));
+console.log(isSubstring('wwater', 'awwaterbottle'));
 console.log(stringRotation('waterbottles', 'bottleswater'));
 console.log(stringRotation('everybody', 'bodyevery'));
 console.log(stringRotation('a', 'b'));
